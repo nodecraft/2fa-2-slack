@@ -1,0 +1,16 @@
+{
+	"plugins": [
+		"appframe-express"
+	],
+	"autoload": [
+		{
+			"name": "Libraries",
+			"folder": "/libs"
+		},
+		{
+			"name": "Controllers",
+			"folder": "/controllers"
+		}
+	],
+	"debug": false
+}

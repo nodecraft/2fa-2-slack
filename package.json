@@ -1,0 +1,36 @@
+{
+	"name": "2fa-slack",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"lint": "npm run lint:js && npm run lint:json",
+		"test": "npm run lint",
+		"lint:js": "eslint **/*.js",
+		"lint:json": "eslint **/*.json",
+		"start": "NODE_ENV=production node app.js",
+		"start:dev": "node app.js",
+		"precommit": "lint"
+	},
+	"keywords": [
+		"twilio",
+		"slack",
+		"2fa",
+		"sms"
+	],
+	"author": "NodeCraft Hosting LLC",
+	"license": "MIT",
+	"dependencies": {
+		"appframe": "^0.5.4",
+		"appframe-express": "^0.4.4",
+		"lodash": "^4.17.4",
+		"slack-webhook": "^1.0.0"
+	},
+	"devDependencies": {
+		"eslint": "4.6.1",
+		"eslint-config-nodecraft": "1.0.8",
+		"eslint-plugin-json": "1.2.0",
+		"eslint-plugin-import": "2.7.0",
+		"eslint-plugin-node": "5.1.1"
+	}
+}

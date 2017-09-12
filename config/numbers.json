@@ -1,0 +1,31 @@
+{
+	"voiceRedirect": "+1-000-000-0000",
+
+	"lookup": {
+		"+15204471423": "twitch",
+		"+14387949428": "stripe",
+		"+16146954705": "google",
+		"+17025003695": "paypal",
+		"+1777539": "paypal"
+	},
+	"twitter": {
+		"color": "#1da1f2",
+		"icon_emoji": ":twitter:"
+	},
+	"google": {
+		"color": "#4285f4",
+		"icon_emoji": ":google:"
+	},
+	"paypal": {
+		"color": "#0070ba",
+		"icon_emoji": ":paypal:"
+	},
+	"twitch": {
+		"color": "#6441A4",
+		"icon_emoji": ":twitch:"
+	},
+	"stripe": {
+		"color": "#6772e5",
+		"icon_emoji": ":stripe:"
+	}
+}

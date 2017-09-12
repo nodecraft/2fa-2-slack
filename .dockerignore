@@ -1,0 +1,14 @@
+*.log
+.babelrc
+.circle-sha
+.editorconfig
+.eslintignore
+.eslintrc.json
+.git
+.gitignore
+Dockerfile
+README.md
+browserslist
+circle.yml
+npm-debug.log
+npm-debug.log.*=
