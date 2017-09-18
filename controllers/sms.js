@@ -8,7 +8,7 @@ module.exports = function(app){
 			defaults = {};
 		if(lookup){
 			title = _.capitalize(lookup) + " " + title;
-			defaults = _.get(app.config, 'numbers.' + lookup, {});
+			defaults = _.cloneDeep(_.get(app.config, 'numbers.' + lookup, {}));
 		}
 		let payload = _.defaults(defaults, {
 			username: title,
