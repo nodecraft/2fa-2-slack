@@ -1,6 +1,4 @@
 *.log
-.babelrc
-.circle-sha
 .editorconfig
 .eslintignore
 .eslintrc.json
@@ -8,7 +6,6 @@
 .gitignore
 Dockerfile
 README.md
-browserslist
 circle.yml
 npm-debug.log
-npm-debug.log.*=
+npm-debug.log.*
