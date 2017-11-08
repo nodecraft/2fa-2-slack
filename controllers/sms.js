@@ -25,7 +25,7 @@ module.exports = function(app){
 			]
 		});
 		if(!lookup){
-			payload.fields.push({
+			payload.attachments[0].fields.push({
 				title: "Number",
 				value: req.body.From
 			});

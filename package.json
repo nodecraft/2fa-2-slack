@@ -20,17 +20,20 @@
 	],
 	"author": "NodeCraft Hosting LLC",
 	"license": "MIT",
+	"engines": {
+		"node": ">=8.0.0"
+	},
 	"dependencies": {
-		"appframe": "0.6.4",
-		"appframe-express": "0.4.5",
+		"appframe": "0.7.2",
+		"appframe-express": "0.4.9",
 		"lodash": "4.17.4",
 		"slack-webhook": "1.0.0"
 	},
 	"devDependencies": {
-		"eslint": "4.7.1",
-		"eslint-config-nodecraft": "1.0.8",
+		"eslint": "4.10.0",
+		"eslint-config-nodecraft": "1.0.9",
 		"eslint-plugin-json": "1.2.0",
-		"eslint-plugin-import": "2.7.0",
-		"eslint-plugin-node": "5.1.1"
+		"eslint-plugin-import": "2.8.0",
+		"eslint-plugin-node": "5.2.1"
 	}
 }
