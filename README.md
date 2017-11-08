@@ -1,5 +1,7 @@
 # 2fa-2-Slack
 
+[![CircleCI](https://circleci.com/gh/nodecraft/2fa-2-slack.svg?style=svg)](https://circleci.com/gh/nodecraft/2fa-2-slack)
+
 Micro-app to send SMS 2FA codes to a slack Channel. Ideal for teams that want a secure login, without the headaches of a single 2FA gatekeeper.
 
 
