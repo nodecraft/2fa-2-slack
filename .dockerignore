@@ -1,11 +1,11 @@
 *.log
+.circle-sha
+.circleci
 .editorconfig
-.eslintignore
-.eslintrc.json
 .git
 .gitignore
 Dockerfile
 README.md
-circle.yml
+node_modules
 npm-debug.log
 npm-debug.log.*
