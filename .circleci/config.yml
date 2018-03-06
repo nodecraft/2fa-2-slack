@@ -2,23 +2,15 @@ version: 2
 jobs:
   build:
     working_directory: ~/2fa-2-slack
-    machine: true
+    machine:
+      image: circleci/classic:201711-01
     steps:
       - checkout
-      - run:
-          name: Install Docker client
-          command: |
-            sudo apt-get remove docker docker-engine docker.io -y -qq
-            sudo curl -fsSL get.docker.com -o get-docker.sh
-            sudo sh get-docker.sh
       - run:
           name: docker build
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker build -t nodecraft/2fa-2-slack .
-      - run:
-          name: List Docker images
-          command: docker images
       - deploy:
           name: docker push
           command: |
