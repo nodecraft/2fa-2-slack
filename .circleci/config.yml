@@ -2,14 +2,17 @@ version: 2
 jobs:
   build:
     working_directory: ~/2fa-2-slack
-    machine:
-      image: circleci/classic:201711-01
+    docker:
+      - image: docker:17-git
     steps:
       - checkout
+      - setup_remote_docker:
+          version: 17.11.0-ce
       - run:
           name: docker build
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
+            docker pull node:10-alpine
             docker build -t nodecraft/2fa-2-slack .
       - deploy:
           name: docker push
