@@ -8,7 +8,7 @@ Micro-app to send SMS 2FA codes to a slack Channel. Ideal for teams that want a 
 ### Requirements
  - Twilio Phone number that supports SMS messaging
  - Slack Webhook URL
- - Publically accessable ip with port `8888`
+ - Publicly accessible ip with port `8888`
 
 
 ### Setup & Configuration
@@ -17,7 +17,7 @@ Micro-app to send SMS 2FA codes to a slack Channel. Ideal for teams that want a 
    - `:twitter:`
    - `:google:`
    - `:paypal:`
-   - `:twitch:`
+   - `:authy:`
    - `:stripe:`
 - `npm install` to install dependancies
 - Set your Twilio Message Callback URL to `http://your-hostname:8888/sms`
@@ -45,5 +45,6 @@ These apps detect the phone number type or have refused to send SMS messages to 
 
 
 #### Roadmap
+ - [ ] Add support for TOTP via commands
  - [ ] Add more phone numbers & apps icons
  - [ ] Convert app to Oauth2 based Slack app to provide button UI for claiming 2fa code.

@@ -2,7 +2,7 @@
 	"voiceRedirect": "+1-000-000-0000",
 
 	"lookup": {
-		"+15204471423": "twitch",
+		"+15204471423": "authy",
 		"+14387949428": "stripe",
 		"+16146954705": "google",
 		"+17025003695": "paypal",
@@ -20,9 +20,9 @@
 		"color": "#0070ba",
 		"icon_emoji": ":paypal:"
 	},
-	"twitch": {
-		"color": "#6441A4",
-		"icon_emoji": ":twitch:"
+	"authy": {
+		"color": "#ec1c24",
+		"icon_emoji": ":authy:"
 	},
 	"stripe": {
 		"color": "#6772e5",

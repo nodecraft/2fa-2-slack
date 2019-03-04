@@ -1,4 +1,4 @@
 'use strict';
-const appframe = require('appframe');
-let app = new appframe();
+const spawnpoint = require('spawnpoint');
+let app = new spawnpoint();
 app.setup();

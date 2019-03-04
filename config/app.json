@@ -1,6 +1,6 @@
 {
 	"plugins": [
-		"appframe-express"
+		"spawnpoint-express"
 	],
 	"autoload": [
 		{
