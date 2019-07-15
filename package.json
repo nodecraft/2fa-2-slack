@@ -1,6 +1,6 @@
 {
 	"name": "2fa-2-slack",
-	"version": "1.0.3",
+	"version": "1.0.5",
 	"description": "",
 	"main": "app.js",
 	"scripts": {
@@ -31,14 +31,14 @@
 	"dependencies": {
 		"lodash": "^4.17.14",
 		"slack-webhook": "^1.0.0",
-		"spawnpoint": "^1.0.4",
-		"spawnpoint-express": "^1.0.2"
+		"spawnpoint": "^1.0.5",
+		"spawnpoint-express": "^1.0.3"
 	},
 	"devDependencies": {
-		"eslint": "^5.16.0",
-		"eslint-config-nodecraft": "^1.6.0",
+		"eslint": "^6.0.1",
+		"eslint-config-nodecraft": "^1.7.1",
 		"eslint-plugin-json": "^1.4.0",
-		"eslint-plugin-import": "^2.17.3",
+		"eslint-plugin-import": "^2.18.0",
 		"eslint-plugin-node": "^9.1.0"
 	}
 }
