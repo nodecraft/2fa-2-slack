@@ -1,6 +1,6 @@
 # 2fa-2-Slack
 
-[![CircleCI](https://circleci.com/gh/nodecraft/2fa-2-slack.svg?style=svg)](https://circleci.com/gh/nodecraft/2fa-2-slack)
+[![CircleCI](https://circleci.com/gh/nodecraft/2fa-2-slack.svg?style=svg)](https://circleci.com/gh/nodecraft/2fa-2-slack) [![Greenkeeper badge](https://badges.greenkeeper.io/nodecraft/2fa-2-slack.svg)](https://greenkeeper.io/)
 
 Micro-app to send SMS 2FA codes to a slack Channel. Ideal for teams that want a secure login, without the headaches of a single 2FA gatekeeper.
 
