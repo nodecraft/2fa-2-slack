@@ -22,12 +22,12 @@ RUN apk del .build-deps
 
 
 
-# --- Tests
-FROM base as tests
+# --- "Build"
+FROM base as build
 COPY --from=dependencies /home/2fa-2-slack/node_modules /home/2fa-2-slack/node_modules
 COPY --chown=node:node . /home/2fa-2-slack
 
-RUN npm run test && npm prune --production
+RUN npm prune --production
 
 RUN rm -rf \
 	.babelrc \
@@ -42,7 +42,7 @@ RUN rm -rf \
 
 # --- Release
 FROM base AS release
-COPY --from=tests --chown=node:node /home/2fa-2-slack /home/2fa-2-slack
+COPY --from=build --chown=node:node /home/2fa-2-slack /home/2fa-2-slack
 
 ENV NODE_ENV=production
 USER node
