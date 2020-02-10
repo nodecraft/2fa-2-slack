@@ -22,7 +22,7 @@
 	"author": "Nodecraft Inc.",
 	"license": "MIT",
 	"engines": {
-		"node": ">=8.0.0"
+		"node": ">=10"
 	},
 	"repository": {
 		"type": "git",
@@ -31,14 +31,14 @@
 	"dependencies": {
 		"lodash": "^4.17.15",
 		"slack-webhook": "^1.0.0",
-		"spawnpoint": "^1.0.7",
-		"spawnpoint-express": "^1.0.5"
+		"spawnpoint": "^1.0.8",
+		"spawnpoint-express": "^1.1.0"
 	},
 	"devDependencies": {
-		"eslint": "^6.5.1",
-		"eslint-config-nodecraft": "^1.7.5",
+		"eslint": "^6.8.0",
+		"eslint-config-nodecraft": "^1.8.0",
 		"eslint-plugin-json": "^2.0.1",
-		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-import": "^2.20.1",
 		"eslint-plugin-node": "^11.0.0"
 	}
 }

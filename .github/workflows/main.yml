@@ -1,0 +1,54 @@
+name: Test and publish
+on:
+  push:
+  pull_request:
+
+env:
+  NODE_VERSION: 12.x
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    if: github.event_name == 'pull_request' || (!contains(github.event.head_commit.message, '[ci skip]') && !contains(github.event.head_commit.message, '[skip ci]'))
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Restore NPM cache
+        uses: actions/cache@v1
+        continue-on-error: true
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: npm run test
+
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    needs: test
+    if: github.event == 'pull_request' || (!contains(github.event.head_commit.message, '[ci skip]') && !contains(github.event.head_commit.message, '[skip ci]')) # don't run if commit message is skipping CI, but always run in pull requests
+    steps:
+      - uses: actions/checkout@v2
+      - name: Docker Login
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+
+      - name: Docker Build
+        run: |
+          docker build -t nodecraft/2fa-2-slack .
+
+      # only publish in master branch. TODO: other tags?
+      - name: Docker Push
+        if: github.ref == 'refs/heads/master'
+        run: |
+          docker push nodecraft/2fa-2-slack
