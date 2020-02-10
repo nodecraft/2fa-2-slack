@@ -16,7 +16,7 @@ RUN apk add --no-cache --virtual .build-deps \
 
 COPY package.json package-lock.json /home/2fa-2-slack/
 
-RUN cd /home/2fa-2-slack/ && npm install
+RUN cd /home/2fa-2-slack/ && npm ci
 
 RUN apk del .build-deps
 
