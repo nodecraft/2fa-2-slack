@@ -1,4 +1,4 @@
 'use strict';
 const spawnpoint = require('spawnpoint');
-let app = new spawnpoint();
+const app = new spawnpoint();
 app.setup();

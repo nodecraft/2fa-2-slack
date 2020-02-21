@@ -3,14 +3,14 @@ module.exports = function(app){
 	const _ = require('lodash');
 
 	app.server.post('/sms', function(req, res){
+		const lookup = _.get(app.config, 'numbers.lookup.' + req.body.From);
 		let title = "2FA Code",
-			lookup = _.get(app.config, 'numbers.lookup.' + req.body.From),
 			defaults = {};
 		if(lookup){
 			title = _.capitalize(lookup) + " " + title;
 			defaults = _.cloneDeep(_.get(app.config, 'numbers.' + lookup, {}));
 		}
-		let payload = _.defaults(defaults, {
+		const payload = _.defaults(defaults, {
 			username: title,
 			attachments: [
 				{
