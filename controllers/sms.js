@@ -36,7 +36,7 @@ module.exports = function(app){
 				res.status(500);
 			}
 			res.json({
-				success: (err === null ? true : false)
+				success: (err === null)
 			});
 		});
 	});
