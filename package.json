@@ -29,7 +29,7 @@
 		"url": "https://github.com/nodecraft/2fa-2-slack"
 	},
 	"dependencies": {
-		"lodash": "^4.17.15",
+		"lodash": "^4.17.19",
 		"slack-webhook": "^1.0.0",
 		"spawnpoint": "^1.0.8",
 		"spawnpoint-express": "^1.1.0"
