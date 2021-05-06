@@ -2,6 +2,18 @@
 	"name": "2fa-2-slack",
 	"version": "1.0.6",
 	"description": "",
+	"keywords": [
+		"twilio",
+		"slack",
+		"2fa",
+		"sms"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nodecraft/2fa-2-slack"
+	},
+	"license": "MIT",
+	"author": "Nodecraft Inc.",
 	"main": "app.js",
 	"scripts": {
 		"lint": "npm run lint:js && npm run lint:json",
@@ -13,32 +25,21 @@
 		"start:dev": "node app.js",
 		"test": "npm run lint"
 	},
-	"keywords": [
-		"twilio",
-		"slack",
-		"2fa",
-		"sms"
-	],
-	"author": "Nodecraft Inc.",
-	"license": "MIT",
-	"engines": {
-		"node": ">=10"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/nodecraft/2fa-2-slack"
-	},
 	"dependencies": {
 		"lodash": "^4.17.21",
 		"slack-webhook": "^1.0.0",
-		"spawnpoint": "^1.0.8",
-		"spawnpoint-express": "^1.1.0"
+		"spawnpoint": "^2.0.0",
+		"spawnpoint-express": "^3.0.2"
 	},
 	"devDependencies": {
-		"eslint": "^6.8.0",
-		"eslint-config-nodecraft": "^4.0.0",
-		"eslint-plugin-json": "^2.1.1",
-		"eslint-plugin-import": "^2.20.2",
-		"eslint-plugin-node": "^11.1.0"
+		"@nodecraft/eslint-config": "^7.7.0",
+		"eslint": "^7.25.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-json": "^3.0.0",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-unicorn": "^31.0.0"
+	},
+	"engines": {
+		"node": ">=14"
 	}
 }

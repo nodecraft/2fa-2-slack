@@ -4,8 +4,8 @@ module.exports = function(app){
 
 	app.server.post('/sms', function(req, res){
 		const lookup = _.get(app.config, 'numbers.lookup.' + req.body.From);
-		let title = "2FA Code",
-			defaults = {};
+		let title = "2FA Code";
+		let defaults = {};
 		if(lookup){
 			title = _.capitalize(lookup) + " " + title;
 			defaults = _.cloneDeep(_.get(app.config, 'numbers.' + lookup, {}));
