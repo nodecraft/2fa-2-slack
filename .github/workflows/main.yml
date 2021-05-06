@@ -47,8 +47,8 @@ jobs:
         run: |
           docker build -t nodecraft/2fa-2-slack .
 
-      # only publish in master branch. TODO: other tags?
+      # only publish in main branch. TODO: other tags?
       - name: Docker Push
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: |
           docker push nodecraft/2fa-2-slack
