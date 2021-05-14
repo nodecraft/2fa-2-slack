@@ -1,5 +1,5 @@
 # --- Base
-FROM node:8-alpine as base
+FROM node:14-alpine as base
 WORKDIR /home/2fa-2-slack
 
 
