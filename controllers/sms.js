@@ -18,16 +18,16 @@ module.exports = function(app){
 					fields: [
 						{
 							title: "Code",
-							value: req.body.Body
-						}
-					]
-				}
-			]
+							value: req.body.Body,
+						},
+					],
+				},
+			],
 		});
 		if(!lookup){
 			payload.attachments[0].fields.push({
 				title: "Number",
-				value: req.body.From
+				value: req.body.From,
 			});
 		}
 		app.log('Received SMS from %s', lookup || req.body.From).debug(req.body);
@@ -36,7 +36,7 @@ module.exports = function(app){
 				res.status(500);
 			}
 			res.json({
-				success: (err === null)
+				success: (err === null),
 			});
 		});
 	});
