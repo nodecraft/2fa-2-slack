@@ -33,7 +33,7 @@
 	},
 	"devDependencies": {
 		"@nodecraft/eslint-config": "^8.1.0",
-		"eslint": "^7.28.0",
+		"eslint": "^7.29.0",
 		"eslint-plugin-import": "^2.23.4",
 		"eslint-plugin-json": "^3.0.0",
 		"eslint-plugin-node": "^11.1.0",
