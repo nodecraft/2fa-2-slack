@@ -29,7 +29,7 @@
 		"lodash": "^4.17.21",
 		"slack-webhook": "^1.0.0",
 		"spawnpoint": "^2.2.0",
-		"spawnpoint-express": "^3.0.2"
+		"spawnpoint-express": "^4.0.0"
 	},
 	"devDependencies": {
 		"@nodecraft/eslint-config": "^8.1.0",
